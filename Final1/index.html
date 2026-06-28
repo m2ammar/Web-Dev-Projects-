@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aether Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">AETHER</div>
+        <div class="nav-links">
+            <a href="#">Products</a>
+            <a href="#">Case Studies</a>
+            <button class="btn-signup">Sign Up</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <p class="subtitle">THE FUTURE OF DATA</p>
+            <h1>Intelligence<br>beyond cloud.</h1>
+            <p>Aether provides a lightweight infrastructure for companies that prioritize speed, security, and effortless scaling.</p>
+            <button class="btn-primary">Explore Platform</button>
+        </div>
+
+        <div class="hero-image-container">
+            <img id="slider-img" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Earth">
+            <div class="controls">
+                <button onclick="changeImage(-1)">←</button>
+                <button onclick="changeImage(1)">→</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stat-item"><h2>99.9%</h2><p>UPTIME GUARANTEED</p></div>
+        <div class="stat-item"><h2>12ms</h2><p>AVERAGE GLOBAL LATENCY</p></div>
+        <div class="stat-item"><h2>40k+</h2><p>ACTIVE NODES</p></div>
+    </section>
+
+    <div class="footer">© 2025 AETHER SYSTEMS. DESIGNED FOR CLARITY.</div>
+
+    <script>
+        const images = [
+            "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80",
+            "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+        ];
+        
+        let currentIndex = 0;
+        const imgElement = document.getElementById('slider-img');
+
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex >= images.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            imgElement.src = images[currentIndex];
+        }
+    </script>
+</body>
+</html>

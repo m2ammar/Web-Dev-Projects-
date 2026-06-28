@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+    <div class="logo">○ AURA</div>
+    <nav>
+        <a href="#">Concept</a>
+        <a href="#">Spaces</a>
+        <a href="#">Journal</a>
+    </nav>
+   </header>
+
+   <section>
+    <div class="Hero">
+        <div class="badge">NEW COLLECTION 2025</div>
+        <h1>Curated For Calm.</h1>
+        <p>A minimalist approach to digital design and physical spaces, focusing on<br> intentionality and natural harmony.</p>
+    </div>
+   </section>
+
+   <section>
+    <div class="image-slider">
+        <button class="prev" onclick="changeImage(-1)">〈</button>
+         <img id="image" src="image/earth.avif" width="1000" height="400" >
+        <button class="next" onclick="changeImage(1)">〉</button>
+    </div>
+   </section>
+
+   <section>
+     <div class="feature">
+        
+        <div class="box">
+            <span>I. ETHOS</span>
+            <h3>Natural Materials</h3>
+            <p>We believe in the longevity of wood, stone, and linen to ground our modern lives.</p>
+        </div>
+
+        <div class="box">
+            <span>II. DETSIGN</span>
+            <h3>Functional Flow</h3>
+            <p>Every element has a purpose, removing the clutter to find the peace beneath.</p>
+        </div>
+        
+        <div class="box">
+            <span>III. VISION</span>
+            <h3>Quiet Luxury</h3>
+            <p>Experience high-end quality that doesn't need to shout to be noticed.</p>
+        </div>
+     </div>
+   </section>
+
+   <footer>
+    <div>
+        <h3>AURA</h3>
+        <p>Building more thoughtful spaces.</p>
+    </div>
+
+    <button class="btn">Join the AURA</button>
+   </footer>
+
+   <script>
+    const images = [
+        "image/earth.avif",
+        "image/earthw.avif",
+        "image/nature.avif" 
+    ];
+
+    let index = 0;
+    const slider = document.getElementById("image");
+
+    function changeImage(direction) {
+        index += direction;
+
+        if (index < 0) {
+            index = images.length - 1;
+        }
+
+        if (index >= images.length) {
+            index = 0;
+        }
+
+        slider.src = images[index];
+
+    }
+</script>
+
+</body>
+</html>

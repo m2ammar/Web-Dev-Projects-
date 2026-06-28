@@ -1,0 +1,146 @@
+/* :root {
+    --bg-color: #f9f7f5;
+    --text-color: #333;
+    --accent: #d9cfc1;
+    --highlight: #e6dfd3;
+} */
+ body{
+   background-color:  #f9f7f5;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+ }
+ header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 20px;
+    margin: 10px 15px;
+ }
+ .logo{
+    font-size: medium;
+    margin-left: 20px;
+    
+ }
+ nav{
+    
+    padding: 20px;
+ }
+ nav a{
+    margin: 15px;
+    text-decoration: none;
+    color: black;
+ }
+ nav a:hover{
+    color: gray;
+ }
+ .Hero{
+    text-align: center;
+    padding: 30px;
+    font-size:large;
+ }
+ .badge{
+    font-size: small;
+    background-color: lightslategray;
+    color: darkgray;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    display: inline-block;/* this will sure the background apply only on the text*/
+ }
+ .Hero h1{
+    color: lightslategrey;
+    padding: 20px;
+    margin: 10px 20px;
+ }
+ .Hero p{
+    font-size: medium;
+    color: gray;
+
+ }
+ .image-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+ }
+ .image-slider img{
+    border-radius: 20px;
+    width: 70%;
+    transition: 0.1s;
+ }
+ .prev{
+    background-color: white;
+    border-radius: 50px;
+    color: black;
+    font-weight: 200;
+    padding: 15px;
+ }
+ .next{
+    background-color: white;
+    border-radius: 50px;
+    color: black;
+    font-weight: 200;
+    padding: 15px;
+ }
+ .feature{
+    margin-top: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    gap: 10px;
+
+ }
+ .box{
+    border: none;
+    flex: 1;
+    background-color: azure;
+    margin: 30px 20px;
+    padding: 15px 20px;
+    border-radius: 15px;
+   
+ }
+ .box:hover{
+    background-color: blanchedalmond;
+    transform: translate(-5p);
+ }
+ footer {
+    display: flex;
+    justify-content: space-between; /* Pushes text to left, button to right */
+    align-items: center;            /* Centers them vertically */
+    padding: 60px 80px;             /* Gives the footer room to breathe */
+    background-color: #f4f1ee;      /* The soft off-white from the image */
+}
+ footer h3{
+    margin: 20px 40px;
+ }
+ footer p{
+    margin: 20px 40px;
+ }
+.btn {
+    background-color: #2d3436;   /* Dark charcoal gray from image */
+    color: #ffffff;
+    border: none;
+    /* CHANGED: Matches the specific rounded-square look in the image */
+    border-radius: 10px;        
+    /* CHANGED: Significant padding increase to give it that "heavy" feel */
+    padding: 22px 40px;         
+    font-size: 15px;
+    font-weight: 600;
+    /* ADDED: Ensures the button doesn't stretch or shrink weirdly */
+    display: inline-block;
+    width: auto;
+    cursor: pointer;
+    /* ADDED: Smooth transition for professional feel */
+    transition: background-color 0.3s ease;
+    /* ADDED: Removes any default browser styling */
+    outline: none;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #1e2425; /* Slightly darker on hover */
+}
